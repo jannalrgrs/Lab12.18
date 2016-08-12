@@ -12,15 +12,30 @@ public class Human extends Player {
 
 	public String inputMove = ""; // inputMove and name will be inputMove by the
 									// user
-	// private String name;
+	private String name = "";
 	// private String rock = "Rock";
 	// private String paper = "Paper";
 	// private String scissors = "Scissors";
 
-	public Human(String inputMove) {
+	public Human(String inputMove, String name) {//, String name) {
 		setinputMove(inputMove);
+		setName(name);
+	
+		//setName(name);
 		// setName(name);
 	}
+
+	
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+
 
 	public Human() {
 		setinputMove(inputMove);
@@ -37,7 +52,7 @@ public class Human extends Player {
 	}
 
 	public void printName() {
-		System.out.println("You chose: " + getinputMove());
+		System.out.println(getName() +": ");
 	}
 
 	{
